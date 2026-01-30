@@ -1180,12 +1180,12 @@ function cargarProductosDesdeLista() {
 // Generar descripción automática basada en el nombre y categoría
 function generarDescripcion(nombre, categoria) {
     const categorias = {
-        'caballeros': 'Fragancia masculina de larga duración',
-        'mujer': 'Perfume femenino con aroma persistente',
-        'unisex': 'Fragancia unisex para cualquier ocasión',
-        'decants': 'Versión de prueba en tamaño pequeño',
-        'body-spray': 'Spray corporal refrescante',
-        'estuches': 'Set completo con varios productos'
+        'caballeros': '',
+        'mujer': '',
+        'unisex': '',
+        'decants': '',
+        'body-spray': '',
+        'estuches': ''
     };
     
     const descBase = categorias[categoria] || 'Perfume de alta calidad';
