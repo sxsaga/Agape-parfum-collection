@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agape Parfum Collection - Perfumes de Lujo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://media-bog2-1.cdn.whatsapp.net/v/t61.24694-24/579668337_1659855321689434_8147182222987168273_n.jpg?ccb=11-4&oh=01_Q5Aa3gGHLpBZNITZSJ_JbL_M1KZXoGUxLdg6O-dmwm2RNqZl2g&oe=698749F0&_nc_sid=5e03e0&_nc_cat=107">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="https://media-bog2-1.cdn.whatsapp.net/v/t61.24694-24/579668337_1659855321689434_8147182222987168273_n.jpg?ccb=11-4&oh=01_Q5Aa3gGHLpBZNITZSJ_JbL_M1KZXoGUxLdg6O-dmwm2RNqZl2g&oe=698749F0&_nc_sid=5e03e0&_nc_cat=107" alt="Agape Parfum Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p>Cargando catálogo de perfumes...</p>
+        </div>
+    </div>
 
+    <!-- Header y Navegación -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://media-bog2-1.cdn.whatsapp.net/v/t61.24694-24/579668337_1659855321689434_8147182222987168273_n.jpg?ccb=11-4&oh=01_Q5Aa3gGHLpBZNITZSJ_JbL_M1KZXoGUxLdg6O-dmwm2RNqZl2g&oe=698749F0&_nc_sid=5e03e0&_nc_cat=107" alt="Agape Parfum Collection Logo">
+                    <h1>Agape Parfum <span>Collection</span></h1>
+                </div>
+                
+                <div class="search-cart">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Buscar perfumes...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-container">
+                        <button id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#caballeros"><i class="fas fa-male"></i> Caballeros</a></li>
+                    <li><a href="#mujer"><i class="fas fa-female"></i> Mujer</a></li>
+                    <li><a href="#unisex"><i class="fas fa-venus-mars"></i> Unisex</a></li>
+                    <li><a href="#decants"><i class="fas fa-flask"></i> Decants</a></li>
+                    <li><a href="#body-spray"><i class="fas fa-spray-can"></i> Body Spray</a></li>
+                    <li><a href="#estuches"><i class="fas fa-gift"></i> Estuches</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrito de compras -->
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total productos:</span>
+                <span id="cart-items-total">0</span>
+            </div>
+            <button id="whatsapp-order" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp
+            </button>
+            <button id="clear-cart" class="clear-btn">
+                <i class="fas fa-trash-alt"></i> Vaciar carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Banner Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Perfumes que narran historias</h2>
+                <p>Descubre nuestra exclusiva colección de más de 500 fragancias inspiradas en emociones, momentos y sensaciones únicas.</p>
+                <a href="#caballeros" class="btn">Explorar colección</a>
+            </div>
+        </section>
+
+        <!-- Sección de Catálogo -->
+        <section id="catalogo" class="catalog-section">
+            <div class="container">
+                <h2 class="section-title">Catálogo Completo</h2>
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="caballeros">Caballeros</button>
+                    <button class="filter-btn" data-category="mujer">Mujer</button>
+                    <button class="filter-btn" data-category="unisex">Unisex</button>
+                    <button class="filter-btn" data-category="decants">Decants</button>
+                    <button class="filter-btn" data-category="body-spray">Body Spray</button>
+                    <button class="filter-btn" data-category="estuches">Estuches</button>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Los productos se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categoría Caballeros -->
+        <section id="caballeros" class="category-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-male"></i> Fragancias para Caballeros</h2>
+                <div class="category-products" id="caballeros-products">
+                    <!-- Productos de caballeros se cargarán aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categoría Mujer -->
+        <section id="mujer" class="category-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-female"></i> Fragancias para Mujer</h2>
+                <div class="category-products" id="mujer-products">
+                    <!-- Productos de mujer se cargarán aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categoría Unisex -->
+        <section id="unisex" class="category-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-venus-mars"></i> Fragancias Unisex</h2>
+                <div class="category-products" id="unisex-products">
+                    <!-- Productos unisex se cargarán aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categoría Decants -->
+        <section id="decants" class="category-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-flask"></i> Decants</h2>
+                <div class="category-products" id="decants-products">
+                    <!-- Decants se cargarán aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categoría Body Spray -->
+        <section id="body-spray" class="category-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-spray-can"></i> Body Spray</h2>
+                <div class="category-products" id="body-spray-products">
+                    <!-- Body sprays se cargarán aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categoría Estuches -->
+        <section id="estuches" class="category-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-gift"></i> Estuches</h2>
+                <div class="category-products" id="estuches-products">
+                    <!-- Estuches se cargarán aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Información -->
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Compra Segura</h3>
+                        <p>Procesamos tu pedido con total confidencialidad y seguridad.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>Atención Personalizada</h3>
+                        <p>Asesoramiento por WhatsApp para elegir tu fragancia ideal.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Entrega Rápida</h3>
+                        <p>Recibe tus fragancias en el menor tiempo posible.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Soporte Continuo</h3>
+                        <p>Te acompañamos durante todo el proceso de compra.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cookies Banner -->
+    <div id="cookies-banner">
+        <div class="cookies-content">
+            <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra <a href="#politica-cookies" class="cookies-link">Política de Cookies</a>.</p>
+            <button id="accept-cookies" class="btn">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://media-bog2-1.cdn.whatsapp.net/v/t61.24694-24/579668337_1659855321689434_8147182222987168273_n.jpg?ccb=11-4&oh=01_Q5Aa3gGHLpBZNITZSJ_JbL_M1KZXoGUxLdg6O-dmwm2RNqZl2g&oe=698749F0&_nc_sid=5e03e0&_nc_cat=107" alt="Agape Parfum Collection">
+                        <h3>Agape Parfum <span>Collection</span></h3>
+                    </div>
+                    <p>Perfumes que capturan momentos y emociones únicas. Exclusividad en cada fragancia.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#caballeros">Fragancias para Caballeros</a></li>
+                        <li><a href="#mujer">Fragancias para Mujer</a></li>
+                        <li><a href="#unisex">Fragancias Unisex</a></li>
+                        <li><a href="#decants">Decants</a></li>
+                        <li><a href="#body-spray">Body Spray</a></li>
+                        <li><a href="#estuches">Estuches</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#politica-privacidad" class="privacy-link">Política de Privacidad</a></li>
+                        <li><a href="#terminos-servicio" class="terms-link">Términos de Servicio</a></li>
+                        <li><a href="#politica-cookies" class="cookies-link">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="contact-info">
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: +58 412-7050149</li>
+                        <li><i class="fas fa-phone"></i> Teléfono: +58 412-7050149</li>
+                    </ul>
+                    <button class="whatsapp-btn contact-btn" id="whatsapp-contact">
+                        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Derechos de Autor -->
+            <div class="copyright-section">
+                <p>&copy; <span id="current-year"></span> Agape Parfum Collection. Todos los derechos reservados.</p>
+                <p class="copyright-text">Todos los contenidos de este sitio web (textos, logotipos, imágenes, diseños, código fuente y cualquier otro material) son propiedad de Agape Parfum Collection y están protegidos por las leyes de derechos de autor y propiedad intelectual. Queda estrictamente prohibida la reproducción, distribución, modificación o uso no autorizado de cualquier contenido sin previa autorización escrita.</p>
+                <p class="copyright-text">Los nombres de productos, marcas y logotipos mencionados son propiedad de sus respectivos dueños y se utilizan únicamente con fines descriptivos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para políticas -->
+    <div id="policy-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Política</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Contenido se cargará dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
